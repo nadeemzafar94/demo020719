@@ -56,10 +56,5 @@ public class CustomerController {
         customerService.deleteCustomer(theId);
         return "redirect:/customer/list";
     }
-    @GetMapping("/getUserAcc")
-    public String getUserAcc(Model theModel) {
-    	List < Customer > theCustomers = customerService.getCustomers();
-        theModel.addAttribute("customers", theCustomers);
-        return "redirect:/customer/list";
-    }
+   
 }
